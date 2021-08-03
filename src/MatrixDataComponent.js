@@ -21,7 +21,7 @@ const MatrixDataComponent = ({ gridData, columnClick }) => {
     let dispGridList = gridData && gridData.length > 0 && gridData[0].map(item => (
         <Col
             xs='3'
-            key={item.gname}
+            key={item.id}
             className={item.bgColor + ' ' + item.gname}
             onClick={(e) => gridColumnClick(item)}
             style={{ height: "100px" }}
