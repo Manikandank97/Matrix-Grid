@@ -35,9 +35,9 @@ function MatrixDashboard() {
           return matrixGridData[0].splice(data.id, 1, data);
         }
       })
+      setAddedMatCol(prevState => [...prevState, data]);
+      setMatrixGridData(prevState => [...prevState]);
     }
-    setAddedMatCol(prevState => [...prevState, data]);
-    setMatrixGridData(prevState => [...prevState]);
 
     if (addedMatCol.length === 2) {
       let removedData = addedMatCol.splice(0, 1);
